@@ -1,0 +1,60 @@
+.colors {
+  margin-bottom: 30px;
+}
+
+.colors h2 {
+  margin: 0;
+  text-align: center;
+}
+
+.colors__list {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.colors__btn {
+  width: 40px;
+  height: 40px;
+  border: solid 2px rgb(109, 109, 109);
+  border-radius: 10px;
+  margin-right: 4px;
+  cursor: pointer;
+}
+
+.colors__btn:nth-child(1) {
+  margin-left: 4px;
+}
+
+.colors__btn:hover,
+.colors__btn:focus {
+  border: solid 2px white;
+  transition: all 0.2s ease;
+}
+
+.colors__btn:active {
+  opacity: 0.7;
+  transition: all 0.2s ease;
+}
+
+.colors__btn--active {
+  border: solid 2px white;
+}
+
+.colors__btn--gray {
+  background-color: gray;
+}
+
+.colors__btn--plum {
+  background-color: plum;
+}
+
+.colors__btn--green {
+  background-color: #849d8f;
+}
+
+.colors__btn--coral {
+  background-color: coral;
+}

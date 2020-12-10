@@ -1,0 +1,129 @@
+.countdown {
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.countdown h2 {
+  margin: 0;
+  text-align: center;
+}
+
+.countdown__form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.countdown__box {
+  font-family: sans-serif;
+  color: #ffffff;
+  font-weight: 100;
+  font-size: 30px;
+  height: 118px;
+  width: inherit;
+  margin-bottom: 10px;
+}
+
+.countdown__number {
+  padding: 10px;
+  border-radius: 3px;
+  background-color: rgb(114, 114, 114);
+  display: inline-block;
+  text-align: center;
+}
+
+.countdown__number:not(:last-child) {
+  margin-right: 10px;
+}
+
+.countdown__input {
+  width: 60px;
+  height: 65px;
+
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 60px;
+  color: #ffffff;
+  text-align: center;
+
+  border: none;
+  border-radius: 3px;
+  background: rgb(99, 99, 99);
+}
+
+input {
+  appearance: textfield; //удаляет стрелки в input
+}
+
+input::-webkit-inner-spin-button, //удаляет стрелки в input
+input::-webkit-outer-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.countdown__input:hover,
+.countdown__input:active {
+  border: solid 1px white;
+  transition: all 0.2s ease;
+}
+
+.countdown__label {
+  display: block;
+  padding-top: 5px;
+  font-size: 16px;
+}
+
+.countdown__btn {
+  width: 300px;
+  height: 30px;
+  margin: 5px;
+  text-align: center;
+  border-radius: 4px;
+  border: solid 2px rgb(109, 109, 109);
+  cursor: pointer;
+}
+
+.countdown__btn:hover,
+.countdown__btn:focus {
+  border: solid 2px white;
+  transition: all 0.2s ease;
+}
+
+.countdown__btn:active {
+  transition: all 0.2s ease;
+}
+
+.countdown__message {
+  display: none;
+}
+
+.countdown__message-text {
+  font-size: 24px;
+  width: 250px;
+  height: 90px;
+  border-radius: 5px;
+  background-color: rgb(124, 124, 124);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.visible {
+  width: 400px;
+  height: 208px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgb(179, 179, 179);
+  border-radius: 5px;
+  border: solid 2px rgb(109, 109, 109);
+}
+
+.hidden {
+  display: none;
+}

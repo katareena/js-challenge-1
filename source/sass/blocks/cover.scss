@@ -1,0 +1,29 @@
+.cover {
+  width: 100vw;
+  height: 100vh;
+  background-color: gold;
+  opacity: 0.8;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5000;
+  display: none;
+}
+
+.cover--show {
+  // display: block;
+}
+
+.cover__inner {
+  background-color: gold;
+  position: fixed;
+  top: 30vh;
+  left: calc(50vw - 240px);
+}
+
+.cover__text {
+  margin: 0;
+  color: black;
+  font-weight: 700;
+  font-size: 70px;
+}

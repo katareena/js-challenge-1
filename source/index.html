@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>js challenge</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="js challenge">
+    <link rel="preload" href="fonts/fira-sans-v10-latin_cyrillic-regular.woff2" type="font/woff2" as="font">
+    <link rel="preload" href="fonts/fira-sans-v10-latin_cyrillic-500.woff2" type="font/woff2" as="font">
+    <link rel="preload" href="fonts/fira-sans-v10-latin_cyrillic-700.woff2" type="font/woff2" as="font">
+    <link rel="preload" crossorigin="anonymous" href="fonts/fira-sans-v10-latin_cyrillic-regular.woff" type="font/woff" as="font">
+    <link rel="preload" crossorigin="anonymous" href="fonts/fira-sans-v10-latin_cyrillic-500.woff" type="font/woff" as="font">
+    <link rel="preload" crossorigin="anonymous" href="fonts/fira-sans-v10-latin_cyrillic-700.woff" type="font/woff" as="font">
+    <link href="css/style.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico"/>
+  </head>
+  <body>
+
+
+    <header class="header"></header>
+    <main class="main">
+      <h1 class="visually-hidden">JS Challenge</h1>
+
+      <section class="colors">
+        <h2>Select the screen color:</h2>
+        <div class="colors__list">
+          <button class="colors__btn colors__btn--gray colors__btn--active" type="button" aria-label="gray" data-color="gray"></button>
+          <button class="colors__btn colors__btn--green" type="button" aria-label="green" data-color="green"></button>
+          <button class="colors__btn colors__btn--plum" type="button" aria-label="plum" data-color="plum"></button>
+          <button class="colors__btn colors__btn--coral" type="button" aria-label="coral" data-color="coral"></button>
+        </div>
+      </section>
+
+      <section class="counter">
+        <h2>Counter:</h2>
+          <div class="counter__inner">
+            <button class="counter__btn counter__btn--minus" type="button" aria-label="plus one"></button>
+            <div class="counter__result">0</div>
+            <button class="counter__btn counter__btn--plus" type="button" aria-label="minus one"></button>
+          </div>
+      </section>
+
+      <section class="countdown">
+        <h2>Countdown:</h2>
+        <form class="countdown__form" id="countdown-form" method="post">
+
+          <div class="countdown__box">
+            <div class="countdown__number">
+              <input class="days countdown__input" id="countdown-days" name="countdown-days" type="number" maxlength="2" placeholder="DD">
+              <label class="countdown__label" for="countdown-days">Days</label>
+            </div>
+
+            <div class="countdown__number">
+              <input class="hours countdown__input" id="countdown-hours" name="countdown-hours" type="number" maxlength="2" placeholder="HH">
+              <label class="countdown__label" for="countdown-hours">Hours</label>
+            </div>
+
+            <div class="countdown__number">
+              <input class="minutes countdown__input" id="countdown-minutes" name="countdown-minutes" type="number" maxlength="2" placeholder="MM">
+              <label class="countdown__label" for="countdown-minutes">Minutes</label>
+            </div>
+
+            <div class="countdown__number">
+              <input class="seconds countdown__input" id="countdown-seconds" name="countdown-seconds" type="number" maxlength="2" placeholder="SS">
+              <label class="countdown__label" for="countdown-seconds">Seconds</label>
+            </div>
+          </div>
+
+          <button class="countdown__btn" id="start" type="button">Start</button>
+          <button class="countdown__btn" id="reset" type="reset" disabled>Reset</button>
+        </form>
+        <div class="countdown__message" id="deadline-message">
+          <div class="countdown__message-text">Time is up!</div>
+        </div>
+      </section>
+
+      <section class="tip">
+        <h2>Tip calculator:</h2>
+          <div class="tip__inner">
+            <!-- сумма к оплате
+            % чаевых
+            сумма чаевых
+            итоговая сумма к оплате -->
+          </div>
+      </section>
+
+      <section class="list">
+        <h2>To do list:</h2>
+          <div class="list__inner">
+
+          </div>
+      </section>
+
+      <section class="form">
+        <h2>Form validator:</h2>
+          <div class="form__inner">
+
+          </div>
+      </section>
+
+      <section class="quote">
+        <h2>Random quote:</h2>
+          <div class="quote__inner">
+            <div class="quote__text"></div>
+            <button class="quote__btn" type="button" aria-label="generate a quote"></button>
+          </div>
+      </section>
+
+    </main>
+    <footer class="footer"></footer>
+
+    <section class="cover">
+      <div class="cover__inner">
+        <p class="cover__text">JS Challenge</p>
+      </div>
+    </section>
+
+    <script src="js/vendor.min.js" defer></script>
+    <script src="js/main.min.js" defer></script>
+
+  </body>
+</html>

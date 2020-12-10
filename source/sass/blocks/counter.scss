@@ -1,0 +1,92 @@
+.counter {
+  margin-bottom: 30px;
+}
+
+.counter h2 {
+  margin: 0;
+  text-align: center;
+}
+
+.counter__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.counter__btn {
+  width: 30px;
+  height: 30px;
+  border: solid 2px rgb(109, 109, 109);
+  border-radius: 50%;
+  position: relative;
+}
+
+.counter__btn:hover,
+.counter__btn:focus {
+  border: solid 2px white;
+  transition: all 0.2s ease;
+}
+
+.counter__btn:active {
+  opacity: 0.4;
+  transition: all 0.2s ease;
+}
+
+.counter__btn--plus {
+  margin-left: 15px;
+}
+
+.counter__btn--minus {
+  margin-right: 15px;
+}
+
+.counter__btn--plus::before {
+  content: "";
+  position: absolute;
+  top: 11.8px;
+  left: 4px;
+  width: 18px;
+  height: 1px;
+
+  border: solid 1.5px rgb(109, 109, 109);
+  background-color: rgb(109, 109, 109);
+  border-radius: 3px;
+}
+
+.counter__btn--plus::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 11.7px;
+  width: 1px;
+  height: 18px;
+
+  border: solid 1.5px rgb(109, 109, 109);
+  background-color: rgb(109, 109, 109);
+  border-radius: 3px;
+}
+
+.counter__btn--minus::before {
+  content: "";
+  position: absolute;
+  top: 11.8px;
+  left: 4px;
+  width: 18px;
+  height: 1px;
+
+  border: solid 1.5px rgb(109, 109, 109);
+  background-color: rgb(109, 109, 109);
+  border-radius: 3px;
+}
+
+
+.counter__result {
+  min-width: 90px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 30px;
+  font-weight: 700;
+}
