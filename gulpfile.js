@@ -69,7 +69,6 @@ task("css", () => {
 //-------------- собираем js ----------------------
 task("jsvendors", () => {
   return src([
-    "./node_modules/svg4everybody/dist/svg4everybody.js",
     "./node_modules/picturefill/dist/picturefill.js",
     "source/js/vendors/*.js",
   ])

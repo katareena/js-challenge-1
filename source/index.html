@@ -16,9 +16,8 @@
     <link rel="shortcut icon" href="favicon.ico"/>
   </head>
   <body>
-
-
     <header class="header"></header>
+
     <main class="main">
       <h1 class="visually-hidden">JS Challenge</h1>
 
@@ -78,16 +77,51 @@
       <section class="tip">
         <h2>Tip calculator:</h2>
           <div class="tip__inner">
-            <!-- сумма к оплате
-            % чаевых
-            сумма чаевых
-            итоговая сумма к оплате -->
+
+            <div class="tip__field">
+              <label class="tip__label" for="tip-bill">Bill amount&#58</label>
+              <input class="tip__input fields-js" id="tip-bill" name="tip-bill" type="number" maxlength="5" placeholder="00.00">
+            </div>
+
+            <div class="tip__field">
+              <label class="tip__label" for="sort">Tip percentage&#58</label>
+
+              <select class="tip__sort fields-js" name="sort" id="sort">
+                <option class="tip__sort-item" value="5" selected>5%</option>
+                <option class="tip__sort-item" value="10">10%</option>
+                <option class="tip__sort-item" value="15">15%</option>
+                <option class="tip__sort-item" value="20">20%</option>
+              </select>
+            </div>
+
+            <div class="tip__field">
+              <label class="tip__label" for="tip-amount">Tip amount&#58</label>
+              <input class="tip__input" id="tip-amount" name="tip-amount" type="number" maxlength="5" placeholder="00.00">
+            </div>
+
+            <div class="tip__field">
+              <label class="tip__label" for="tip-total">Total amount&#58</label>
+              <input class="tip__input" id="tip-total" name="tip-total" type="number" maxlength="5" placeholder="00.00">
+            </div>
+
           </div>
       </section>
 
       <section class="list">
         <h2>To do list:</h2>
           <div class="list__inner">
+
+            <form class="list__form">
+              <label class="visually-hidden" for="list-input">Enter an activity</label>
+              <input class="list__input" type="text" id="input-field" placeholder="Enter an activity..." autofocus>
+              <button class="list__btn" type="button" aria-label="Add an activity">&#43;</button>
+              <button class="list__reset" type="reset" aria-label="Reset">&#10000;</button>
+            </form>
+
+            <div>
+              <ul class="list__list">
+              </ul>
+            </div>
 
           </div>
       </section>

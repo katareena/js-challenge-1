@@ -10,9 +10,17 @@
     }
   };
 
+  function resetAllInpuns() {
+    var inputs = document.querySelectorAll('input')
+    inputs.forEach(function (el) {
+      el.value = "";
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     cover.classList.add('cover--show');
     window.countdown.getDefaultCountdown();
+    resetAllInpuns();
   });
 
   document.addEventListener('click', closeOverlayHandler);
