@@ -46,14 +46,8 @@
   font-weight: 400;
 }
 
-// .form__item:nth-last-child(1) {
-//   margin-bottom: 46px;
-// }
-
 .form__submit {
   @include button;
   width: 305px;
   margin-top: 15px;
 }
-
-// .form__reset {}
