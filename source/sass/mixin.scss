@@ -1,148 +1,140 @@
-@mixin list-reset {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
+// @mixin list-reset {
+//   margin: 0;
+//   padding: 0;
+//   list-style: none;
+// }
 
-@mixin title {
-  margin: 0;
-  font-family: "Montserrat", "Tahoma", sans-serif;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  color: $title;
-}
-
-@mixin blockToCenter {
-  display: block;
-  margin: 0 auto;
-}
+// @mixin title {
+//   margin: 0;
+//   font-family: "Montserrat", "Tahoma", sans-serif;
+//   font-weight: 700;
+//   letter-spacing: -0.02em;
+//   color: $title;
+// }
 
 @mixin input {
+  height: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+
   font-family: "Fira Sans", "Tahoma", sans-serif;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: calc(20 / 17);
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  color: rgba($text, 0.5);
-  border: 2px solid $basic-decor;
-  border-radius: 80px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: calc(26 / 15);
+  color: #484848;
+
+  border-radius: 4px;
 }
 
 @mixin button {
   display: block;
-  font-weight: 700;
-  font-size: 13px;
-  line-height: calc(20 / 17);
-  letter-spacing: 0.3px;
+  height: 34px;
   text-align: center;
-  text-transform: uppercase;
-  color: $white;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
-  background: $gradient;
-  border-radius: 80px;
-  border: none;
+  border-radius: 6px;
+  border: solid 2px rgb(109, 109, 109);
   cursor: pointer;
 
   &:hover,
   &:focus {
-    background: $gradient-hover;
+    border: solid 2px white;
+    transition: all 0.2s ease;
   }
 
   &:active {
-    background: $button-click, $gradient;
+    background-color: rgb(201, 201, 201);
+    transition: all 0.2s ease;
   }
 }
 
-@mixin button-close {
-  cursor: pointer;
-  position: absolute;
-  top: 30px;
-  right: 30px;
-  width: 30px;
-  height: 30px;
-  border: none;
-  background-color: transparent;
+// @mixin button-close {
+//   cursor: pointer;
+//   position: absolute;
+//   top: 30px;
+//   right: 30px;
+//   width: 30px;
+//   height: 30px;
+//   border: none;
+//   background-color: transparent;
 
-  &::before {
-    position: absolute;
-    top: 0;
-    right: 10px;
-    content: "";
-    height: 22px;
-    width: 2px;
-    background: $gradient;
-    transform: rotate(45deg);
+//   &::before {
+//     position: absolute;
+//     top: 0;
+//     right: 10px;
+//     content: "";
+//     height: 22px;
+//     width: 2px;
+//     background: $gradient;
+//     transform: rotate(45deg);
 
-    @media (max-width: $mobile-width) {
-      top: -10px;
-      right: 0;
-    }
-  }
+//     @media (max-width: $mobile-width) {
+//       top: -10px;
+//       right: 0;
+//     }
+//   }
 
-  &::after {
-    position: absolute;
-    top: 0;
-    right: 10px;
-    content: "";
-    height: 22px;
-    width: 2px;
-    background: $gradient;
-    transform: rotate(-45deg);
+//   &::after {
+//     position: absolute;
+//     top: 0;
+//     right: 10px;
+//     content: "";
+//     height: 22px;
+//     width: 2px;
+//     background: $gradient;
+//     transform: rotate(-45deg);
 
-    @media (max-width: $mobile-width) {
-      top: -10px;
-      right: 0;
-    }
-  }
+//     @media (max-width: $mobile-width) {
+//       top: -10px;
+//       right: 0;
+//     }
+//   }
 
-  &:hover::after,
-  &:focus::after,
-  &:hover::before,
-  &:focus::before {
-    background: $accent-decor-3;
-    opacity: 0.5;
-  }
+//   &:hover::after,
+//   &:focus::after,
+//   &:hover::before,
+//   &:focus::before {
+//     background: $accent-decor-3;
+//     opacity: 0.5;
+//   }
 
-  &:active::after,
-  &:active::before {
-    background: $gradient;
-    opacity: 0.5;
-  }
-}
+//   &:active::after,
+//   &:active::before {
+//     background: $gradient;
+//     opacity: 0.5;
+//   }
+// }
 
-@mixin modal {
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 5000;
+// @mixin modal {
+//   width: 100vw;
+//   height: 100vh;
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   z-index: 5000;
 
-  @media (max-width: $mobile-width) {
-    height: auto;
-  }
-}
+//   @media (max-width: $mobile-width) {
+//     height: auto;
+//   }
+// }
 
-@mixin modal-form {
-  width: 480px;
-  background-color: $white;
-  border-radius: 8px;
-  position: fixed;
-  top: 15vh;
-  left: calc(50vw - 240px);
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  box-shadow: 0 3px 12px rgba($black, 0.1);
+// @mixin modal-form {
+//   width: 480px;
+//   background-color: $white;
+//   border-radius: 8px;
+//   position: fixed;
+//   top: 15vh;
+//   left: calc(50vw - 240px);
+//   display: flex;
+//   flex-wrap: wrap;
+//   flex-direction: column;
+//   box-shadow: 0 3px 12px rgba($black, 0.1);
 
-  @media (max-width: $mobile-width) {
-    width: 100%;
-    min-width: 320px;
-    max-width: 767px;
-    min-height: 768px;
-    border-radius: 0;
-    top: 0;
-    left: 0;
-  }
-}
+//   @media (max-width: $mobile-width) {
+//     width: 100%;
+//     min-width: 320px;
+//     max-width: 767px;
+//     min-height: 768px;
+//     border-radius: 0;
+//     top: 0;
+//     left: 0;
+//   }
+// }

@@ -114,8 +114,8 @@
             <form class="list__form">
               <label class="visually-hidden" for="list-input">Enter an activity</label>
               <input class="list__input" type="text" id="input-field" placeholder="Enter an activity..." autofocus>
-              <button class="list__btn" type="button" aria-label="Add an activity">&#43;</button>
-              <button class="list__reset" type="reset" aria-label="Reset">&#10000;</button>
+              <button class="list__btn" type="button" aria-label="add an activity">&#43;</button>
+              <button class="list__reset" type="reset" aria-label="reset">&#10000;</button>
             </form>
 
             <div>
@@ -128,9 +128,22 @@
 
       <section class="form">
         <h2>Form validator:</h2>
-          <div class="form__inner">
+          <form class="form__inner" action="https://echo.htmlacademy.ru" method="post">
 
-          </div>
+            <div class="form__item">
+              <label class="form__label" for="user-mail">E-mail</label>
+              <input class="form__input" id="user-mail" type="email" name="email" autocomplete="off" placeholder="email@example.com">
+              <p id="message-mail"></p>
+            </div>
+
+            <div class="form__item">
+              <label class="form__label" for="user-password">Password</label>
+              <input class="form__input" id="user-password" type="password" name="password" autocomplete="off" maxlength="8" minlength="6" placeholder="********">
+              <p id="message-password"></p>
+            </div>
+
+            <button class="form__submit" type="submit" aria-label="submit">Submit</button>
+          </form>
       </section>
 
       <section class="quote">

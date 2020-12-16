@@ -12,12 +12,13 @@
 
   function resetAllInpuns() {
     var inputs = document.querySelectorAll('input')
+    // console.log(inputs);
     inputs.forEach(function (el) {
-      el.value = "";
+      el.value = '';
     });
   }
 
-  document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListener('DOMContentLoaded', function () {
     cover.classList.add('cover--show');
     window.countdown.getDefaultCountdown();
     resetAllInpuns();

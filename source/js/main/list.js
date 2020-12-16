@@ -20,7 +20,7 @@
 
     if(inputValue) {
       list.appendChild(displayItem);
-      input.value = "";
+      input.value = '';
     }
 
     displayItem.addEventListener('click', deleteToDoItemHandler);
@@ -32,9 +32,9 @@
         list.removeChild(list.firstChild);
       }
     }
-  }
+  };
 
-  btn.addEventListener('click', addToDoItemHandler)
-  reset.addEventListener('click', resetToDoListHandler)
+  btn.addEventListener('click', addToDoItemHandler);
+  reset.addEventListener('click', resetToDoListHandler);
 
 })();

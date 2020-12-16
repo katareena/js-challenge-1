@@ -1,9 +1,10 @@
-# JS Challenge (December 2020)
+# JS Challenge (december 2020)
 * color swap
 * counter
 * countdown
 * tip calculator
 * to do list
+* form validator (mail, password)
 * random quote
 ## Quick start guide
 ### To get started, you should have installed:
