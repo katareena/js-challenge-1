@@ -1,0 +1,42 @@
+.quote {
+  margin-bottom: 30px;
+}
+
+.quote h2 {
+  margin: 0;
+  text-align: center;
+}
+
+.quote__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.quote__btn {
+  @include button;
+  width: 305px;
+  margin-bottom: 15px;
+}
+
+.quote__text {
+  width: 300px;
+  min-height: 160px;
+  padding: 15px;
+  border-radius: 4px;
+  text-align: center;
+  font-style: italic;
+  color: rgb(34, 34, 34);
+
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+  background: radial-gradient(150% 119.49% at 50% 50.85%, rgba(0, 0, 0, 0) 30.67%, rgba(3, 3, 3, 0.24) 100%), #ffffff;
+}
+
+.quote__text p {
+  margin: 0;
+}
+
+.quote__author {
+  font-weight: 500;
+}

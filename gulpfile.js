@@ -28,7 +28,14 @@ task("html", () => {
   return src("source/*.html")
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(dest("build"));
-})
+});
+
+task("copy:img", () => {
+  return  src("source/img/**/*.{jpg,png,svg,webp}")
+    .pipe(newer("build/img"))
+    .pipe(dest("build/img"))
+    .pipe(server.stream());
+});
 
 task("copy:ico", () => {
   return  src("source/img/**/*.ico")
@@ -110,11 +117,12 @@ task("watch", () => {
   watch("source/sass/**/*.scss", series("css"));
   watch("source/*.html", series("html", "refresh"));
   watch("source/js/**/*.js", series("jsvendors", "jsmain"));
+  watch("source/img/**/*.{jpg,svg,png}", series("copy:img"));
   watch("source/img/**/*.ico", series("copy:ico"));
   watch("source/fonts/*.{woff,woff2}", series("copy:fonts"));
 });
 
-const buildTasks = ["clean", parallel(["html","csscopy", "css", "jsvendors", "jsmain", "copy:fonts", "copy:ico"])];
+const buildTasks = ["clean", parallel(["html","csscopy", "css", "jsvendors", "jsmain", "copy:fonts", "copy:img", "copy:ico"])];
 
 // if (!isDev) {
 //   buildTasks.push("img-min");
