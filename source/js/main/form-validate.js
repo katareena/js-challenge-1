@@ -65,7 +65,4 @@
 
   submitBtn.addEventListener('click', submitFormHandler);
 
-  // localStorage.getItem('userMail');
-  // element.addEventListener разница между 'click' 'submit' и переход формы на эхо
-
 })();

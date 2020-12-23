@@ -53,10 +53,10 @@
 }
 
 input {
-  appearance: textfield; //удаляет стрелки в input
+  appearance: textfield; //removes arrows in input
 }
 
-input::-webkit-inner-spin-button, //удаляет стрелки в input
+input::-webkit-inner-spin-button, //removes arrows in input
 input::-webkit-outer-spin-button {
   appearance: none;
   margin: 0;

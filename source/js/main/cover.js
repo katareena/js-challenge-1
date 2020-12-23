@@ -1,12 +1,42 @@
 'use strict';
 (function () {
-  var cover = document.querySelector('.cover');
+  var CURSOR_WIDTH = 200;
+  var cover = document.querySelector('.cover__bg');
+  var cursor = document.querySelector('.cover__cursor');
+  var mainWrap = document.querySelector('.main__wrap');
 
   function closeOverlayHandler(evt) {
-    window.matchesForIE.changeMatchesForIE();
-    if (cover.classList.contains('cover--show')) {
+    if (cover.classList.contains('show')) {
       evt.preventDefault();
-      cover.classList.remove('cover--show');
+      cover.classList.remove('show');
+      cursor.classList.remove('show');
+      mainWrap.classList.remove('visually-hidden');
+    }
+  };
+
+  var limits = {
+    // top: 100,
+    // left: 100,
+    right: window.innerWidth - CURSOR_WIDTH,
+    bottom: window.innerHeight - CURSOR_WIDTH
+  };
+
+  function mouseMoveHandler(evt) {
+    if (cover.classList.contains('show')) {
+      var x = evt.pageX;
+      var y = evt.clientY;
+
+      if (x < limits.right) {
+        cursor.style.left = x + 'px';
+      } else {
+        cursor.style.left = limits.right + 'px';
+      }
+
+      if (y < limits.bottom) {
+        cursor.style.top = y + 'px';
+      } else {
+        cursor.style.top = limits.bottom + 'px';
+      }
     }
   };
 
@@ -17,40 +47,16 @@
     });
   };
 
-//----------------- поворот картинки ---------
-
-  // var setDebounce = function () {
-  //   var lastTimeout;
-  //   if (lastTimeout) {
-  //     window.clearTimeout(lastTimeout);
-  //   }
-  //   lastTimeout = window.setTimeout(function() {
-  //     if (cover.classList.contains('cover--rotate')) {
-  //       cover.classList.remove('cover--rotate');
-  //     }
-  //   }, 1000);
-  // };
-
-  var mouseMoveHandler = function (moveEvt) {
-    moveEvt.preventDefault();
-
-    if (cover.classList.contains('cover--show')) {
-      cover.style.transform = 'rotate(180deg)';
-      // cover.classList.add('cover--rotate');
-    }
-
-    // setDebounce();
-
-  };
-// ----------------------- конец -------------------
-
-  document.addEventListener('DOMContentLoaded', function () {
-    cover.classList.add('cover--show');
+  function setPageHandler() {
+    mainWrap.classList.add('visually-hidden');
+    cover.classList.add('show');
+    cursor.classList.add('show');
     window.countdown.getDefaultCountdown();
     resetAllInpuns();
     document.addEventListener('mousemove', mouseMoveHandler);
-  });
+  }
 
+  document.addEventListener('DOMContentLoaded', setPageHandler);
   document.addEventListener('click', closeOverlayHandler);
 
 })();
