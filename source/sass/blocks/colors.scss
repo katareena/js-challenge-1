@@ -18,7 +18,7 @@
 .colors__btn {
   width: 40px;
   height: 40px;
-  border: solid 2px rgb(109, 109, 109);
+  border: solid 2px $gray-basic;
   border-radius: 10px;
   margin-right: 4px;
   cursor: pointer;
@@ -30,7 +30,7 @@
 
 .colors__btn:hover,
 .colors__btn:focus {
-  border: solid 2px white;
+  border: solid 2px $white;
   transition: all 0.2s ease;
 }
 
@@ -40,21 +40,21 @@
 }
 
 .colors__btn--active {
-  border: solid 2px white;
+  border: solid 2px $white;
 }
 
 .colors__btn--gray {
-  background-color: gray;
+  background-color: $body-background-1;
 }
 
 .colors__btn--plum {
-  background-color: plum;
+  background-color: $body-background-2;
 }
 
 .colors__btn--green {
-  background-color: #849d8f;
+  background-color: $body-background-3;
 }
 
 .colors__btn--coral {
-  background-color: coral;
+  background-color: $body-background-4;
 }

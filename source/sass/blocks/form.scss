@@ -24,23 +24,24 @@
   @include input;
   width: 300px;
   border: transparent;
-  box-shadow: 0 0 0 2px rgb(109, 109, 109);
+  box-shadow: 0 0 0 2px $gray-basic;
   transition: all 0.2s ease;
 }
 
 .form__input:hover,
-.form__input:active {
-  box-shadow: 0 0 0 2px rgb(65, 65, 65);
+.form__input:active,
+.form__input:focus {
+  box-shadow: 0 0 0 2px $gray-dark-2;
 }
 
 .form__input--invalid {
-  box-shadow: 0 0 0 2px #e74a35;
+  box-shadow: 0 0 0 2px $red-basic;
 }
 
 .form__item p {
   margin: 0;
   height: 20px;
-  color: #bb3826;
+  color: $red-dark;
   font-size: 12px;
   line-height: 20px;
   font-weight: 400;

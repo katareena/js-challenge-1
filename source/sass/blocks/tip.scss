@@ -24,17 +24,18 @@
   @include input;
   width: inherit;
   border: none;
-  box-shadow: 0 0 0 2px rgb(109, 109, 109);
+  box-shadow: 0 0 0 2px $gray-basic;
 }
 
 .tip__input:hover,
-.tip__input:active {
-  box-shadow: 0 0 0 2px white;
+.tip__input:active,
+.tip__input:focus {
+  box-shadow: 0 0 0 2px $white;
   transition: all 0.2s ease;
 }
 
 .tip__input:invalid {
-  box-shadow: 0 0 0 2px #e74a35;
+  box-shadow: 0 0 0 2px $red-basic;
 }
 
 .tip__sort {
@@ -42,12 +43,13 @@
   height: 30px;
   border-radius: 4px;
   border: none;
-  box-shadow: 0 0 0 2px rgb(109, 109, 109);
+  box-shadow: 0 0 0 2px $gray-basic;
   padding-left: 10px;
 }
 
 .tip__sort:hover,
-.tip__sort:active {
-  box-shadow: 0 0 0 2px white;
+.tip__sort:active,
+.tip__sort:focus {
+  box-shadow: 0 0 0 2px $white;
   transition: all 0.2s ease;
 }

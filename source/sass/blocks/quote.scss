@@ -24,13 +24,15 @@
   width: 300px;
   min-height: 160px;
   padding: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   border-radius: 4px;
   text-align: center;
   font-style: italic;
-  color: rgb(34, 34, 34);
+  color: $white;
 
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
-  background: radial-gradient(150% 119.49% at 50% 50.85%, rgba(0, 0, 0, 0) 30.67%, rgba(3, 3, 3, 0.24) 100%), #ffffff;
+  box-shadow: 0 3px 12px rgba($black, 0.5);
+  background: radial-gradient(150% 119.49% at 50% 50.85%, rgba($black, 0.5) 30.67%, rgba($black, 0.6) 100%), $white;
 }
 
 .quote__text p {

@@ -17,7 +17,7 @@
 
 .countdown__box {
   font-family: sans-serif;
-  color: #ffffff;
+  color: $white;
   font-weight: 100;
   font-size: 30px;
   height: 118px;
@@ -25,15 +25,15 @@
   margin-bottom: 10px;
 }
 
-.countdown__number {
+.countdown__item {
   padding: 10px;
   border-radius: 3px;
-  background-color: rgb(114, 114, 114);
+  background-color: $gray-light-2;
   display: inline-block;
   text-align: center;
 }
 
-.countdown__number:not(:last-child) {
+.countdown__item:not(:last-child) {
   margin-right: 10px;
 }
 
@@ -44,12 +44,12 @@
   font-size: 30px;
   font-weight: 500;
   line-height: 60px;
-  color: #ffffff;
+  color: $white;
   text-align: center;
 
   border: none;
   border-radius: 3px;
-  background: rgb(99, 99, 99);
+  background: $gray-dark-1;
 }
 
 input {
@@ -63,8 +63,9 @@ input::-webkit-outer-spin-button {
 }
 
 .countdown__input:hover,
-.countdown__input:active {
-  border: solid 1px white;
+.countdown__input:active,
+.countdown__input:focus {
+  border: solid 1px $white;
   transition: all 0.2s ease;
 }
 
@@ -89,8 +90,8 @@ input::-webkit-outer-spin-button {
   width: 250px;
   height: 90px;
   border-radius: 5px;
-  background-color: rgb(124, 124, 124);
-  color: #ffffff;
+  background-color: $gray-basic;
+  color: $white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -105,9 +106,9 @@ input::-webkit-outer-spin-button {
   align-items: center;
   justify-content: center;
 
-  background-color: rgb(179, 179, 179);
+  background-color: $gray-light-1;
   border-radius: 5px;
-  border: solid 2px rgb(109, 109, 109);
+  border: solid 2px $gray-basic;
 }
 
 .hidden {

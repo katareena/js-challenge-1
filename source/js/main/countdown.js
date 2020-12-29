@@ -79,6 +79,7 @@
       initializeClock(deadline);
       startBtn.disabled = true;
       resetBtn.disabled = false;
+      startBtn.blur();
     }
   };
 

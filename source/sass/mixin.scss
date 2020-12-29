@@ -7,7 +7,7 @@
   font-weight: 400;
   font-size: 15px;
   line-height: calc(26 / 15);
-  color: #484848;
+  color: $text;
 
   border-radius: 4px;
 }
@@ -16,18 +16,18 @@
   display: block;
   height: 34px;
   text-align: center;
+  background-color: $blue;
   border-radius: 6px;
-  border: solid 2px rgb(109, 109, 109);
+  border: solid 2px $gray-basic;
   cursor: pointer;
+  transition: all 0.2s ease;
 
   &:hover,
   &:focus {
-    border: solid 2px white;
-    transition: all 0.2s ease;
+    border: solid 2px $white;
   }
 
   &:active {
-    background-color: rgb(201, 201, 201);
-    transition: all 0.2s ease;
+    background-color: rgba($blue, 0.4);
   }
 }

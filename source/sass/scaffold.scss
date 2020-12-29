@@ -14,7 +14,7 @@ body {
   font-size: 15px;
   line-height: calc(26 / 15);
   color: $text;
-  background-color: gray;
+  background-color: $body-background-1;
   width: 100%;
   min-height: 100%;
   margin: 0;
@@ -39,5 +39,5 @@ img {
 
 a {
   text-decoration: none;
-  color: black;
+  color: $black;
 }
