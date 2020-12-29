@@ -15,8 +15,6 @@
   };
 
   var limits = {
-    // top: 100,
-    // left: 100,
     right: window.innerWidth - CURSOR_WIDTH,
     bottom: window.innerHeight - CURSOR_WIDTH
   };

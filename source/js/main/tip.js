@@ -19,7 +19,4 @@
   fieldsInput.forEach(elem => {
     elem.addEventListener('change', calculationTipHandler);
   });
-  // alternative entry:
-  // billInput.addEventListener('change', calculationTipHandler);
-  // percentInput.addEventListener('change', calculationTipHandler);
 })();

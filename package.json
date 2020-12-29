@@ -52,7 +52,7 @@
     "node": "8.16"
   },
   "dependencies": {
-    "normalize.less": "^1.0.0",
+    "normalize-scss": "^7.0.1",
     "picturefill": "^3.0.3"
   }
 }
