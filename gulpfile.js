@@ -17,6 +17,7 @@ const concat = require("gulp-concat");
 const posthtml = require("gulp-posthtml");
 const include = require("posthtml-include");
 const htmlmin = require("gulp-htmlmin");
+const babel = require('gulp-babel');
 
 const isDev = !process.env.NODE_ENV || process.env.NODE_ENV === "development";
 
@@ -91,6 +92,9 @@ task("jsmain", () => {
     "source/js/main/*.js",
   ])
     .pipe(gulpIf(isDev, sourcemap.init()))
+    .pipe(babel({
+      presets: ['@babel/env']
+    }))
     .pipe(concat("main.min.js"))
     .pipe(gulpIf(isDev, sourcemap.write(".")))
     .pipe(gulpIf(!isDev, uglify()))
@@ -123,10 +127,6 @@ task("watch", () => {
 });
 
 const buildTasks = ["clean", parallel(["html","csscopy", "css", "jsvendors", "jsmain", "copy:fonts", "copy:img", "copy:ico"])];
-
-// if (!isDev) {
-//   buildTasks.push("img-min");
-// }
 
 task("build", series(buildTasks));
 task("development", series("build", parallel("server", "watch")));
