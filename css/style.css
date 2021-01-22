@@ -386,6 +386,9 @@ input::-webkit-outer-spin-button {
   -webkit-filter: blur(5px) grayscale(1);
           filter: blur(5px) grayscale(1);
   cursor: none; }
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .cover__bg {
+      background: url("../img/bg-jsss-ie.jpg"); } }
 
 .cover__cursor {
   display: none;
