@@ -40,6 +40,13 @@
   box-shadow: 0 0 0 1px $green;
 }
 
+// .list__input::placeholder {
+//   //for ie11
+//   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+//     padding-bottom: 10px;
+//   }
+// }
+
 .list__btn {
   width: 15%;
   margin-top: -1px;

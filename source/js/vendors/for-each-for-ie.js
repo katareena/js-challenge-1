@@ -13,10 +13,10 @@
     }
   };
 
-  window.vendor = {
+  window.forEachForIE = {
     changeForEachForIE: changeForEachForIE
   };
 
-  window.vendor.changeForEachForIE();
+  window.forEachForIE.changeForEachForIE();
 
 })();

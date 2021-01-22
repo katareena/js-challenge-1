@@ -97,13 +97,12 @@
   };
 
   var closeMessageOverlayHandler = function (evt) {
-    window.matchesForIE.changeMatchesForIE();
-      if (message.classList.contains('visible')) {
-        evt.preventDefault();
-        message.classList.remove('visible');
-        message.classList.add('hidden');
-        form.classList.remove('hidden');
-        getDefaultCountdown();
+    if (message.classList.contains('visible')) {
+      evt.preventDefault();
+      message.classList.remove('visible');
+      message.classList.add('hidden');
+      form.classList.remove('hidden');
+      getDefaultCountdown();
     }
   };
 

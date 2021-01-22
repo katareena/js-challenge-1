@@ -5,7 +5,7 @@
 * tip calculator
 * to do list
 * form validator (mail, password)
-* random quote
+* random quote (don't work for ie11)
 ## Quick start guide
 ### To get started, you should have installed:
 * Node.js v12.16.1.
