@@ -398,6 +398,7 @@ input::-webkit-outer-spin-button {
   left: 0;
   top: 0;
   background: url("../img/bg-jsss-click.jpg");
+  background-repeat: repeat;
   border-radius: 50%;
   background-attachment: fixed;
   -webkit-filter: blur(0);
