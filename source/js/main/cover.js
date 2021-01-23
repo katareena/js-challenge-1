@@ -11,6 +11,8 @@
       cover.classList.remove('show');
       cursor.classList.remove('show');
       mainWrap.classList.remove('visually-hidden');
+      document.removeEventListener('mousemove', mouseMoveHandler);
+      document.removeEventListener('click', closeOverlayHandler);
     }
   };
 

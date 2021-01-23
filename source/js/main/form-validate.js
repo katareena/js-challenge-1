@@ -3,8 +3,6 @@
   var form = document.querySelector('.form__inner');
   var mailInput = form.querySelector('#user-mail');
   var passwordInput = form.querySelector('#user-password');
-  // var inputs = form.querySelectorAll('input');
-  // var btnSubmit = form.querySelector('.form__submit');
 
   var isStorageSupport = true;
   var storage = '';
@@ -19,44 +17,14 @@
     document.getElementById(id).innerText = message;
   };
 
-  function validateMailInputHandler() {
-    mailInput.classList.remove('form__input--invalid');
-    error_message('message-mail', '');
+  // function validateMailInputHandler() {
+  //   mailInput.classList.remove('form__input--invalid');
+  //   error_message('message-mail', '');
 
-    if (mailInput.value !== '') {
-      if (!mailInput.value.includes('@') || !mailInput.value.includes('.')) {
-        mailInput.classList.add('form__input--invalid');
-        error_message('message-mail', 'Please enter the valid username');
-      } else {
-        return true;
-      }
-    }
-    return false;
-  }
-
-  function validatePasswordInputHandler() {
-    passwordInput.classList.remove('form__input--invalid');
-    error_message('message-password', '');
-
-    if (passwordInput.value !== '') {
-      if (passwordInput.value.length < 6) {
-        passwordInput.classList.add('form__input--invalid');
-        error_message('message-password', 'Please enter the valid password');
-      } else {
-        return true;
-      }
-    }
-    return false;
-  }
-
-  // function validateAllInputsHandler(input, idMessage, requirement) {
-  //   input.classList.remove('form__input--invalid');
-  //   error_message(idMessage, '');
-
-  //   if (input.value !== '') {
-  //     if (requirement) {
-  //       input.classList.add('form__input--invalid');
-  //       error_message(idMessage, 'Please enter the valid value');
+  //   if (mailInput.value !== '') {
+  //     if (!mailInput.value.includes('@') || !mailInput.value.includes('.')) {
+  //       mailInput.classList.add('form__input--invalid');
+  //       error_message('message-mail', 'Please enter the valid e-mail');
   //     } else {
   //       return true;
   //     }
@@ -64,8 +32,39 @@
   //   return false;
   // }
 
+  // function validatePasswordInputHandler() {
+  //   passwordInput.classList.remove('form__input--invalid');
+  //   error_message('message-password', '');
+
+  //   if (passwordInput.value !== '') {
+  //     if (passwordInput.value.length < 6) {
+  //       passwordInput.classList.add('form__input--invalid');
+  //       error_message('message-password', 'Please enter the valid password');
+  //     } else {
+  //       return true;
+  //     }
+  //   }
+  //   return false;
+  // }
+
+  function validateAllInputsHandler(input, idMessage, requirement) {
+    input.classList.remove('form__input--invalid');
+    error_message(idMessage, '');
+    if (input.value !== '') {
+      if (requirement) {
+        input.classList.add('form__input--invalid');
+        error_message(idMessage, 'Please enter the valid value');
+      } else {
+        return true;
+      }
+    }
+    return false;
+  }
+
   function submitFormHandler(evt) {
-    if (!validateMailInputHandler() || !validatePasswordInputHandler()) {
+    // if (!validateMailInputHandler() || !validatePasswordInputHandler()) {
+    if (!validateAllInputsHandler(mailInput, 'message-mail', !mailInput.value.includes('@') || !mailInput.value.includes('.')) ||
+        !validateAllInputsHandler(passwordInput, 'message-password', passwordInput.value.length < 6)) {
       evt.preventDefault();
       if (!mailInput.value) {
         mailInput.classList.add('form__input--invalid');
@@ -89,15 +88,15 @@
 
   };
 
-  mailInput.addEventListener('input', validateMailInputHandler);
-  passwordInput.addEventListener('input', validatePasswordInputHandler);
+  // mailInput.addEventListener('input', validateMailInputHandler);
+  // passwordInput.addEventListener('input', validatePasswordInputHandler);
 
-  // mailInput.addEventListener('input', function() {
-  //   validateAllInputsHandler(mailInput, 'message-mail', !mailInput.value.includes('@') || !mailInput.value.includes('.'));
-  // });
-  // passwordInput.addEventListener('input', function() {
-  //   validateAllInputsHandler(passwordInput, 'message-password', passwordInput.value.length < 6);
-  // });
+  mailInput.addEventListener('input', function() {
+    validateAllInputsHandler(mailInput, 'message-mail', !mailInput.value.includes('@') || !mailInput.value.includes('.'));
+  });
+  passwordInput.addEventListener('input', function() {
+    validateAllInputsHandler(passwordInput, 'message-password', passwordInput.value.length < 6);
+  });
 
   form.addEventListener('submit', submitFormHandler);
 
