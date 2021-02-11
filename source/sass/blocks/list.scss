@@ -17,6 +17,10 @@
 .list__form {
   display: flex;
   margin-left: 75px;
+
+  @media (max-width: $mobile-width) {
+    margin-left: 0;
+  }
 }
 
 .list__input {
@@ -32,6 +36,12 @@
   color: $text;
   font-size: 18px;
   line-height: 50px;
+
+  @media (max-width: $mobile-width) {
+    width: 200px;
+    height: 40px;
+    padding: 7px;
+  }
 }
 
 .list__input:hover,
@@ -39,13 +49,6 @@
 .list__input:focus {
   box-shadow: 0 0 0 1px $green;
 }
-
-// .list__input::placeholder {
-//   //for ie11
-//   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-//     padding-bottom: 10px;
-//   }
-// }
 
 .list__btn {
   width: 15%;
@@ -59,6 +62,10 @@
   font-size: 25px;
   transition: background 0.3s;
   cursor: pointer;
+
+  @media (max-width: $mobile-width) {
+    height: 42px;
+  }
 }
 
 .list__btn:hover,
@@ -69,7 +76,6 @@
 .list__btn:active {
   background: rgba($green-light, 0.5);
 }
-
 
 .list__reset {
   display: block;
@@ -88,6 +94,14 @@
   transform: rotate(180deg);
   transition: all 0.3s;
   cursor: pointer;
+
+  @media (max-width: $mobile-width) {
+    width: 45px;
+    height: 40px;
+    line-height: 40px;
+    margin-left: 10px;
+    margin-right: 5px;
+  }
 }
 
 .list__reset:hover,
@@ -114,10 +128,17 @@
   font-size: 18px;
   cursor: pointer;
   position: relative;
+
+  @media (max-width: $mobile-width) {
+    height: 35px;
+    padding: 8px 7px 7px 40px;
+    font-size: 18px;
+    line-height: 1;
+  }
 }
 
 .list__item::before {
-  content: " ";
+  content: ' ';
   position: absolute;
   display: inline-block;
   width: 20px;
@@ -127,6 +148,10 @@
   background: $white;
   border-radius: 4px;
   box-shadow: inset 0 0 3px rgba($black, 0.4);
+
+  @media (max-width: $mobile-width) {
+    top: 7px;
+  }
 }
 
 .checked {
@@ -135,7 +160,7 @@
 }
 
 .checked::before {
-  content: "";
+  content: '';
   display: inline-block;
   text-align: center;
   box-shadow: inset 0 0 3px rgba($black, 0.4);

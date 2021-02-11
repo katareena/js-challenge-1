@@ -99,5 +99,4 @@
   });
 
   form.addEventListener('submit', submitFormHandler);
-
 })();

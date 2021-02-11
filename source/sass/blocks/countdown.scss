@@ -19,14 +19,17 @@
   font-family: sans-serif;
   color: $white;
   font-weight: 100;
-  font-size: 30px;
+  font-size: 40px;
   height: 118px;
   width: inherit;
   margin-bottom: 10px;
 }
 
 .countdown__item {
+  width: 65px;
   padding: 10px;
+  padding-left: 0;
+  padding-right: 0;
   border-radius: 3px;
   background-color: $gray-light-2;
   display: inline-block;
@@ -38,10 +41,10 @@
 }
 
 .countdown__input {
-  width: 60px;
+  width: 80%;
   height: 65px;
 
-  font-size: 30px;
+  font-size: 24px;
   font-weight: 500;
   line-height: 60px;
   color: $white;

@@ -1,170 +1,184 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>js challenge</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="js challenge">
-    <link rel="preload" href="fonts/fira-sans-v10-latin_cyrillic-regular.woff2" type="font/woff2" as="font">
-    <link rel="preload" href="fonts/fira-sans-v10-latin_cyrillic-500.woff2" type="font/woff2" as="font">
-    <link rel="preload" href="fonts/fira-sans-v10-latin_cyrillic-700.woff2" type="font/woff2" as="font">
-    <link rel="preload" crossorigin="anonymous" href="fonts/fira-sans-v10-latin_cyrillic-regular.woff" type="font/woff" as="font">
-    <link rel="preload" crossorigin="anonymous" href="fonts/fira-sans-v10-latin_cyrillic-500.woff" type="font/woff" as="font">
-    <link rel="preload" crossorigin="anonymous" href="fonts/fira-sans-v10-latin_cyrillic-700.woff" type="font/woff" as="font">
-    <link href="css/style.min.css" rel="stylesheet">
-    <link rel="shortcut icon" href="favicon.ico"/>
-  </head>
-  <body>
-    <header></header>
 
-    <main class="main">
-      <h1 class="visually-hidden">JS Challenge</h1>
+<head>
+  <meta charset="utf-8">
+  <title>js challenge</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="js challenge">
+  <link rel="preload" href="fonts/fira-sans-v10-latin_cyrillic-regular.woff2" type="font/woff2" as="font">
+  <link rel="preload" href="fonts/fira-sans-v10-latin_cyrillic-500.woff2" type="font/woff2" as="font">
+  <link rel="preload" href="fonts/fira-sans-v10-latin_cyrillic-700.woff2" type="font/woff2" as="font">
+  <link rel="preload" crossorigin="anonymous" href="fonts/fira-sans-v10-latin_cyrillic-regular.woff" type="font/woff"
+    as="font">
+  <link rel="preload" crossorigin="anonymous" href="fonts/fira-sans-v10-latin_cyrillic-500.woff" type="font/woff"
+    as="font">
+  <link rel="preload" crossorigin="anonymous" href="fonts/fira-sans-v10-latin_cyrillic-700.woff" type="font/woff"
+    as="font">
+  <link href="css/style.min.css" rel="stylesheet">
+  <link rel="shortcut icon" href="favicon.ico" />
+</head>
 
-      <div class="main__wrap">
-        <section class="colors">
-          <h2>Select the screen color:</h2>
-          <div class="colors__list">
-            <button class="colors__btn colors__btn--gray colors__btn--active" type="button" aria-label="gray" data-color="gray"></button>
-            <button class="colors__btn colors__btn--green" type="button" aria-label="green" data-color="green"></button>
-            <button class="colors__btn colors__btn--plum" type="button" aria-label="plum" data-color="plum"></button>
-            <button class="colors__btn colors__btn--coral" type="button" aria-label="coral" data-color="coral"></button>
+<body>
+  <header></header>
+
+  <main class="main">
+    <h1 class="visually-hidden">JS Challenge</h1>
+
+    <div class="main__wrap">
+      <section class="colors">
+        <h2>Select the screen color:</h2>
+        <div class="colors__list">
+          <button class="colors__btn colors__btn--gray colors__btn--active" type="button" aria-label="gray"
+            data-color="gray"></button>
+          <button class="colors__btn colors__btn--green" type="button" aria-label="green" data-color="green"></button>
+          <button class="colors__btn colors__btn--plum" type="button" aria-label="plum" data-color="plum"></button>
+          <button class="colors__btn colors__btn--coral" type="button" aria-label="coral" data-color="coral"></button>
+        </div>
+      </section>
+
+      <section class="counter">
+        <h2>Counter:</h2>
+        <div class="counter__inner">
+          <button class="counter__btn counter__btn--minus" type="button" aria-label="plus one"></button>
+          <div class="counter__result">0</div>
+          <button class="counter__btn counter__btn--plus" type="button" aria-label="minus one"></button>
+        </div>
+      </section>
+
+      <section class="countdown">
+        <h2>Countdown:</h2>
+        <form class="countdown__form" id="countdown-form" method="post">
+
+          <div class="countdown__box">
+            <div class="countdown__item">
+              <input class="days countdown__input" id="countdown-days" name="countdown-days" type="number" maxlength="2"
+                placeholder="DD">
+              <label class="countdown__label" for="countdown-days">Days</label>
+            </div>
+
+            <div class="countdown__item">
+              <input class="hours countdown__input" id="countdown-hours" name="countdown-hours" type="number"
+                maxlength="2" placeholder="HH">
+              <label class="countdown__label" for="countdown-hours">Hours</label>
+            </div>
+
+            <div class="countdown__item">
+              <input class="minutes countdown__input" id="countdown-minutes" name="countdown-minutes" type="number"
+                maxlength="2" placeholder="MM">
+              <label class="countdown__label" for="countdown-minutes">Minutes</label>
+            </div>
+
+            <div class="countdown__item">
+              <input class="seconds countdown__input" id="countdown-seconds" name="countdown-seconds" type="number"
+                maxlength="2" placeholder="SS">
+              <label class="countdown__label" for="countdown-seconds">Seconds</label>
+            </div>
           </div>
-        </section>
 
-        <section class="counter">
-          <h2>Counter:</h2>
-            <div class="counter__inner">
-              <button class="counter__btn counter__btn--minus" type="button" aria-label="plus one"></button>
-              <div class="counter__result">0</div>
-              <button class="counter__btn counter__btn--plus" type="button" aria-label="minus one"></button>
-            </div>
-        </section>
+          <button class="countdown__btn" id="start" type="button">Start</button>
+          <button class="countdown__btn" id="reset" type="reset" disabled>Reset</button>
+        </form>
+        <div class="countdown__message" id="deadline-message">
+          <div class="countdown__message-text">Time is up!</div>
+        </div>
+      </section>
 
-        <section class="countdown">
-          <h2>Countdown:</h2>
-          <form class="countdown__form" id="countdown-form" method="post">
+      <section class="tip">
+        <h2>Tip calculator:</h2>
+        <div class="tip__inner">
 
-            <div class="countdown__box">
-              <div class="countdown__item">
-                <input class="days countdown__input" id="countdown-days" name="countdown-days" type="number" maxlength="2" placeholder="DD">
-                <label class="countdown__label" for="countdown-days">Days</label>
-              </div>
+          <div class="tip__field">
+            <label class="tip__label" for="tip-bill">Bill amount&#58</label>
+            <input class="tip__input fields-js" id="tip-bill" name="tip-bill" type="number" maxlength="5"
+              placeholder="00.00">
+          </div>
 
-              <div class="countdown__item">
-                <input class="hours countdown__input" id="countdown-hours" name="countdown-hours" type="number" maxlength="2" placeholder="HH">
-                <label class="countdown__label" for="countdown-hours">Hours</label>
-              </div>
+          <div class="tip__field">
+            <label class="tip__label" for="sort">Tip percentage&#58</label>
 
-              <div class="countdown__item">
-                <input class="minutes countdown__input" id="countdown-minutes" name="countdown-minutes" type="number" maxlength="2" placeholder="MM">
-                <label class="countdown__label" for="countdown-minutes">Minutes</label>
-              </div>
+            <select class="tip__sort fields-js" name="sort" id="sort">
+              <option class="tip__sort-item" value="5" selected>5%</option>
+              <option class="tip__sort-item" value="10">10%</option>
+              <option class="tip__sort-item" value="15">15%</option>
+              <option class="tip__sort-item" value="20">20%</option>
+            </select>
+          </div>
 
-              <div class="countdown__item">
-                <input class="seconds countdown__input" id="countdown-seconds" name="countdown-seconds" type="number" maxlength="2" placeholder="SS">
-                <label class="countdown__label" for="countdown-seconds">Seconds</label>
-              </div>
-            </div>
+          <div class="tip__field">
+            <label class="tip__label" for="tip-amount">Tip amount&#58</label>
+            <input class="tip__input" id="tip-amount" name="tip-amount" type="number" maxlength="5" placeholder="00.00">
+          </div>
 
-            <button class="countdown__btn" id="start" type="button">Start</button>
-            <button class="countdown__btn" id="reset" type="reset" disabled>Reset</button>
+          <div class="tip__field">
+            <label class="tip__label" for="tip-total">Total amount&#58</label>
+            <input class="tip__input" id="tip-total" name="tip-total" type="number" maxlength="5" placeholder="00.00">
+          </div>
+
+        </div>
+      </section>
+
+      <section class="list">
+        <h2>To do list:</h2>
+        <div class="list__inner">
+
+          <form class="list__form">
+            <label class="visually-hidden" for="list-input">Enter an activity</label>
+            <input class="list__input" type="text" id="input-field" placeholder="Enter an activity..." autofocus>
+            <button class="list__btn" type="button" aria-label="add an activity">&#43;</button>
+            <button class="list__reset" type="reset" aria-label="reset">&#10000;</button>
           </form>
-          <div class="countdown__message" id="deadline-message">
-            <div class="countdown__message-text">Time is up!</div>
+
+          <!-- <div> -->
+          <ul class="list__list">
+          </ul>
+          <!-- </div> -->
+
+        </div>
+      </section>
+
+      <section class="form">
+        <h2>Form validator:</h2>
+        <form class="form__inner" action="https://echo.htmlacademy.ru" method="post">
+
+          <div class="form__item">
+            <label class="form__label" for="user-mail">E-mail</label>
+            <input class="form__input" id="user-mail" type="email" name="email" autocomplete="off"
+              placeholder="email@example.com">
+            <p id="message-mail"></p>
           </div>
-        </section>
 
-        <section class="tip">
-          <h2>Tip calculator:</h2>
-            <div class="tip__inner">
+          <div class="form__item">
+            <label class="form__label" for="user-password">Password</label>
+            <input class="form__input" id="user-password" type="password" name="password" autocomplete="off"
+              maxlength="8" minlength="6" placeholder="********">
+            <p id="message-password"></p>
+          </div>
 
-              <div class="tip__field">
-                <label class="tip__label" for="tip-bill">Bill amount&#58</label>
-                <input class="tip__input fields-js" id="tip-bill" name="tip-bill" type="number" maxlength="5" placeholder="00.00">
-              </div>
+          <button class="form__submit" type="submit" aria-label="button submit">Submit</button>
+        </form>
+      </section>
 
-              <div class="tip__field">
-                <label class="tip__label" for="sort">Tip percentage&#58</label>
-
-                <select class="tip__sort fields-js" name="sort" id="sort">
-                  <option class="tip__sort-item" value="5" selected>5%</option>
-                  <option class="tip__sort-item" value="10">10%</option>
-                  <option class="tip__sort-item" value="15">15%</option>
-                  <option class="tip__sort-item" value="20">20%</option>
-                </select>
-              </div>
-
-              <div class="tip__field">
-                <label class="tip__label" for="tip-amount">Tip amount&#58</label>
-                <input class="tip__input" id="tip-amount" name="tip-amount" type="number" maxlength="5" placeholder="00.00">
-              </div>
-
-              <div class="tip__field">
-                <label class="tip__label" for="tip-total">Total amount&#58</label>
-                <input class="tip__input" id="tip-total" name="tip-total" type="number" maxlength="5" placeholder="00.00">
-              </div>
-
-            </div>
-        </section>
-
-        <section class="list">
-          <h2>To do list:</h2>
-            <div class="list__inner">
-
-              <form class="list__form">
-                <label class="visually-hidden" for="list-input">Enter an activity</label>
-                <input class="list__input" type="text" id="input-field" placeholder="Enter an activity..." autofocus>
-                <button class="list__btn" type="button" aria-label="add an activity">&#43;</button>
-                <button class="list__reset" type="reset" aria-label="reset">&#10000;</button>
-              </form>
-
-              <div>
-                <ul class="list__list">
-                </ul>
-              </div>
-
-            </div>
-        </section>
-
-        <section class="form">
-          <h2>Form validator:</h2>
-            <form class="form__inner" action="https://echo.htmlacademy.ru" method="post">
-
-              <div class="form__item">
-                <label class="form__label" for="user-mail">E-mail</label>
-                <input class="form__input" id="user-mail" type="email" name="email" autocomplete="off" placeholder="email@example.com">
-                <p id="message-mail"></p>
-              </div>
-
-              <div class="form__item">
-                <label class="form__label" for="user-password">Password</label>
-                <input class="form__input" id="user-password" type="password" name="password" autocomplete="off" maxlength="8" minlength="6" placeholder="********">
-                <p id="message-password"></p>
-              </div>
-
-              <button class="form__submit" type="submit" aria-label="button submit">Submit</button>
-            </form>
-        </section>
-
-        <section class="quote">
-          <h2>Random quote:</h2>
-            <div class="quote__inner">
-              <button class="quote__btn" type="button" aria-label="generate a quote">Generate a Quote</button>
-              <div class="quote__text"></div>
-            </div>
-        </section>
-      </div>
-    </main>
-    <footer></footer>
-
-    <div class="cover">
-      <div class="cover__bg"></div>
-      <div class="cover__cursor"></div>
+      <section class="quote">
+        <h2>Random quote:</h2>
+        <div class="quote__inner">
+          <button class="quote__btn" type="button" aria-label="generate a quote">Generate a Quote</button>
+          <div class="quote__text"></div>
+        </div>
+      </section>
     </div>
+  </main>
+  <footer></footer>
 
-    <script src="js/vendor.min.js" defer></script>
-    <script src="js/main.min.js" defer></script>
+  <div class="cover">
+    <div class="cover__bg"></div>
+    <div class="cover__cursor"></div>
+  </div>
 
-  </body>
+  <script src="js/vendor.min.js" defer></script>
+  <script src="js/main.min.js" defer></script>
+
+</body>
+
 </html>
