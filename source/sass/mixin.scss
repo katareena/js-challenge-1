@@ -8,8 +8,11 @@
   font-size: 15px;
   line-height: calc(26 / 15);
   color: $text;
-
   border-radius: 4px;
+
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    line-height: 1.73;
+  }
 }
 
 @mixin button {

@@ -20,6 +20,7 @@
 
   @media (max-width: $mobile-width) {
     margin-left: 0;
+    width: 300px;
   }
 }
 
@@ -40,6 +41,7 @@
   @media (max-width: $mobile-width) {
     width: 200px;
     height: 40px;
+    line-height: 20px;
     padding: 7px;
   }
 }
@@ -53,6 +55,7 @@
 .list__btn {
   width: 15%;
   margin-top: -1px;
+  margin-left: -6px; //for safari
   height: 52px;
   border: none;
   border-top-right-radius: 5px;
