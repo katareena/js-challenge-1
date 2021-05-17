@@ -7,15 +7,8 @@
   font-weight: 400;
   font-size: 15px;
   line-height: calc(26 / 15);
-  // color: $text;
+  color: $text;
   border-radius: 4px;
-
-  // color: #ffffff;
-  // background-color: #636363;
-
-  // &::placeholder {
-  //   color: #ffffff;
-  // }
 
   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
     line-height: 1.73;
