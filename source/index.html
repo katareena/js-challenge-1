@@ -41,9 +41,9 @@
       <section class="counter">
         <h2>Counter:</h2>
         <div class="counter__inner">
-          <button class="counter__btn counter__btn--minus" type="button" aria-label="plus one"></button>
+          <button class="counter__btn counter__btn--minus" type="button" aria-label="minus one" disabled></button>
           <div class="counter__result">0</div>
-          <button class="counter__btn counter__btn--plus" type="button" aria-label="minus one"></button>
+          <button class="counter__btn counter__btn--plus" type="button" aria-label="plus one"></button>
         </div>
       </section>
 
@@ -90,8 +90,13 @@
         <div class="tip__inner">
 
           <div class="tip__field">
+            <label class="tip__label" for="tip-people">How many people&#58</label>
+            <input class="tip__input fields-js" id="tip-people" name="tip-people" type="text" value="1">
+          </div>
+
+          <div class="tip__field">
             <label class="tip__label" for="tip-bill">Bill amount&#58</label>
-            <input class="tip__input fields-js" id="tip-bill" name="tip-bill" type="number" maxlength="5"
+            <input class="tip__input fields-js" id="tip-bill" name="tip-bill" type="number"
               placeholder="00.00">
           </div>
 
@@ -108,12 +113,17 @@
 
           <div class="tip__field">
             <label class="tip__label" for="tip-amount">Tip amount&#58</label>
-            <input class="tip__input" id="tip-amount" name="tip-amount" type="number" maxlength="5" placeholder="00.00">
+            <input class="tip__input" id="tip-amount" name="tip-amount" type="number" placeholder="00.00">
           </div>
 
           <div class="tip__field">
             <label class="tip__label" for="tip-total">Total amount&#58</label>
-            <input class="tip__input" id="tip-total" name="tip-total" type="number" maxlength="5" placeholder="00.00">
+            <input class="tip__input" id="tip-total" name="tip-total" type="number" placeholder="00.00">
+          </div>
+
+          <div class="tip__field">
+            <label class="tip__label tip__label--result" for="tip-per-person">How much per person&#58</label>
+            <input class="tip__input tip__input--result" id="tip-per-person" name="tip-per-person" type="number" placeholder="00.00">
           </div>
 
         </div>
@@ -130,10 +140,8 @@
             <button class="list__reset" type="reset" aria-label="reset">&#10000;</button>
           </form>
 
-          <!-- <div> -->
           <ul class="list__list">
           </ul>
-          <!-- </div> -->
 
         </div>
       </section>
@@ -180,5 +188,4 @@
   <script src="js/main.min.js" defer></script>
 
 </body>
-
 </html>

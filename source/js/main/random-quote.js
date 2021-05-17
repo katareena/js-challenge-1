@@ -1,5 +1,5 @@
-'use strict';
 (function () {
+  // ----------------- random quote -----------------
   const quoteBtn = document.querySelector('.quote__btn');
   const quoteText = document.querySelector('.quote__text');
 

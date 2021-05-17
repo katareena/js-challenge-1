@@ -1,6 +1,5 @@
-'use strict';
+"use strict";
 (function () {
-
   var changeForEachForIE = function () {
     if ('NodeList' in window && !NodeList.prototype.forEach) {
       console.info('polyfill changeForEachForIE for IE11');

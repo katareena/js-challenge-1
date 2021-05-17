@@ -1,14 +1,14 @@
-'use strict';
 (function () {
-  var buttons = document.querySelectorAll('.colors__btn');
-  var body = document.body;
+  // ----------------- screen color -----------------
+  const buttons = document.querySelectorAll('.colors__btn');
+  const body = document.body;
 
   function changeColor(trgt) {
-    var elemEvt = trgt;
-    var color = elemEvt.dataset.color;
+    const elemEvt = trgt;
+    const color = elemEvt.dataset.color;
     body.setAttribute('class', '');
 
-    for (var i = 0; i < buttons.length; i++) {
+    for (let i = 0; i < buttons.length; i++) {
       buttons[i].classList.remove('colors__btn--active')
     }
 

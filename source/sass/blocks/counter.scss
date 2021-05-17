@@ -19,6 +19,7 @@
   border: solid 2px $gray-basic;
   border-radius: 50%;
   position: relative;
+  cursor: pointer;
 }
 
 .counter__btn:hover,
@@ -30,6 +31,14 @@
 .counter__btn:active {
   opacity: 0.4;
   transition: all 0.2s ease;
+}
+
+.counter__btn:disabled {
+  cursor: initial;
+  border: solid 2px $gray-basic;
+  color: $gray-light-1;
+  opacity: 1;
+  background-color: $gray-dark-1;
 }
 
 .counter__btn--plus {

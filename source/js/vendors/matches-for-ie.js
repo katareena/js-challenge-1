@@ -1,7 +1,5 @@
-'use strict';
-
+"use strict";
 (function () {
-
   var changeMatchesForIE = function () {
     if (!Element.prototype.matches) {
       console.info('polyfill changeMatchesForIE for IE11');

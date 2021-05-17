@@ -1,9 +1,10 @@
-'use strict';
 (function () {
-  var CURSOR_WIDTH = 200;
-  var cover = document.querySelector('.cover__bg');
-  var cursor = document.querySelector('.cover__cursor');
-  var mainWrap = document.querySelector('.main__wrap');
+  // ----------------- cover -----------------
+  const CURSOR_WIDTH = 200;
+  const cover = document.querySelector('.cover__bg');
+  const cursor = document.querySelector('.cover__cursor');
+  const mainWrap = document.querySelector('.main__wrap');
+  const peopleInput = document.querySelector('#tip-people');
 
   function closeOverlayHandler(evt) {
     if (cover.classList.contains('show')) {
@@ -14,17 +15,17 @@
       document.removeEventListener('mousemove', mouseMoveHandler);
       document.removeEventListener('click', closeOverlayHandler);
     }
-  }
+  };
 
-  var limits = {
+  const limits = {
     right: window.innerWidth - CURSOR_WIDTH,
     bottom: window.innerHeight - CURSOR_WIDTH,
   };
 
   function mouseMoveHandler(evt) {
     if (cover.classList.contains('show')) {
-      var x = evt.pageX;
-      var y = evt.clientY;
+      const x = evt.pageX;
+      const y = evt.clientY;
 
       if (x < limits.right) {
         cursor.style.left = x + 'px';
@@ -38,14 +39,17 @@
         cursor.style.top = limits.bottom + 'px';
       }
     }
-  }
+  };
 
   function resetAllInpuns() {
-    var inputs = document.querySelectorAll('input');
+    const inputs = document.querySelectorAll('input');
     inputs.forEach(function (el) {
       el.value = '';
     });
-  }
+    peopleInput.value = 1;
+    const form = document.querySelector('.form__inner');
+    form.reset();
+  };
 
   function setPageHandler() {
     mainWrap.classList.add('visually-hidden');
@@ -57,17 +61,14 @@
     document.addEventListener('touchstart', touchStartHandler, false);
     document.addEventListener('touchmove', touchMoveHandler, false);
     document.addEventListener('touchend', touchEndHandler, false);
-  }
+  };
 
   document.addEventListener('DOMContentLoaded', setPageHandler);
   document.addEventListener('click', closeOverlayHandler);
 
-  // ----------------- touch event -----------------
-  var x = 0;
-  var y = 0;
-
-  console.log(x);
-  console.log(y);
+  // ----------------- cover touch event -----------------
+  let x = 0;
+  let y = 0;
 
   function touchStartHandler(evt) {
     if (cover.classList.contains('show')) {
@@ -76,7 +77,7 @@
           console.log('1 touch');
           x = evt.touches[0].clientX;
           y = evt.touches[0].clientY;
-          // evt.preventDefault();
+          evt.preventDefault();
           break;
         case 2:
           console.log('2 touches');
@@ -92,7 +93,7 @@
           break;
       }
     }
-  }
+  };
 
   function touchMoveHandler(evt) {
     if (cover.classList.contains('show')) {
@@ -104,7 +105,7 @@
         cursor.style.top = `${Math.abs(y - evt.touches[0].clientY)}px`;
       }
     }
-  }
+  };
 
   function touchEndHandler(evt) {
     if (cover.classList.contains('show')) {
@@ -116,5 +117,5 @@
       mainWrap.classList.remove('visually-hidden');
       evt.preventDefault();
     }
-  }
+  };
 })();

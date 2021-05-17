@@ -14,8 +14,6 @@ const autoprefixer = require("autoprefixer");
 const cssnano = require("gulp-cssnano");
 const uglify = require("gulp-uglify");
 const concat = require("gulp-concat");
-const posthtml = require("gulp-posthtml");
-const include = require("posthtml-include");
 const htmlmin = require("gulp-htmlmin");
 const babel = require('gulp-babel');
 
@@ -77,7 +75,6 @@ task("css", () => {
 //-------------- собираем js ----------------------
 task("jsvendors", () => {
   return src([
-    "./node_modules/picturefill/dist/picturefill.js",
     "source/js/vendors/*.js",
   ])
     .pipe(gulpIf(isDev, sourcemap.init()))

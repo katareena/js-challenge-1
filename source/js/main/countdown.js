@@ -1,18 +1,18 @@
-'use strict';
 (function () {
-  var timeinterval
-  var startBtn = document.querySelector('#start');
-  var resetBtn = document.querySelector('#reset');
-  var message = document.querySelector('#deadline-message');
-  var inputs = document.querySelectorAll('.countdown__input');
-  var form = document.querySelector('#countdown-form');
+  // ----------------- countdown -----------------
+  let timeinterval;
+  const startBtn = document.querySelector('#start');
+  const resetBtn = document.querySelector('#reset');
+  const message = document.querySelector('#deadline-message');
+  const inputs = document.querySelectorAll('.countdown__input');
+  const form = document.querySelector('#countdown-form');
 
   function getTimeRemaining(endtime) {
-    var t = Date.parse(endtime) - Date.parse(new Date());
-    var seconds = Math.floor((t / 1000) % 60);
-    var minutes = Math.floor((t / 1000 / 60) % 60);
-    var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
-    var days = Math.floor(t / (1000 * 60 * 60 * 24));
+    let t = Date.parse(endtime) - Date.parse(new Date());
+    let seconds = Math.floor((t / 1000) % 60);
+    let minutes = Math.floor((t / 1000 / 60) % 60);
+    let hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+    let days = Math.floor(t / (1000 * 60 * 60 * 24));
     return {
       total: t,
       days: days,
@@ -23,14 +23,14 @@
   };
 
   function initializeClock(endtime) {
-    var clock = document.querySelector('.countdown__box');
-    var daysInput = clock.querySelector('.days');
-    var hoursInput = clock.querySelector('.hours');
-    var minutesInput = clock.querySelector('.minutes');
-    var secondsInput = clock.querySelector('.seconds');
+    const clock = document.querySelector('.countdown__box');
+    const daysInput = clock.querySelector('.days');
+    const hoursInput = clock.querySelector('.hours');
+    const minutesInput = clock.querySelector('.minutes');
+    const secondsInput = clock.querySelector('.seconds');
 
     function updateClock() {
-      var t = getTimeRemaining(endtime);
+      let t = getTimeRemaining(endtime);
 
       if (t.total <= 0) {
         form.classList.add('hidden');
@@ -51,12 +51,12 @@
   };
 
   function validateForm () {
-    var valid = true;
-    var clock = document.querySelector('.countdown__box');
-    var daysInput = clock.querySelector('.days');
-    var hoursInput = clock.querySelector('.hours');
-    var minutesInput = clock.querySelector('.minutes');
-    var secondsInput = clock.querySelector('.seconds');
+    let valid = true;
+    const clock = document.querySelector('.countdown__box');
+    const daysInput = clock.querySelector('.days');
+    const hoursInput = clock.querySelector('.hours');
+    const minutesInput = clock.querySelector('.minutes');
+    const secondsInput = clock.querySelector('.seconds');
 
     if (daysInput.value === '' && hoursInput.value === '' && minutesInput.value === '' && secondsInput.value === '') {
       alert ( "Fill in at least one field of the Сountdown, please." );
@@ -67,13 +67,13 @@
   };
 
   function startCountdownHandler () {
-    var clock = document.querySelector('.countdown__box');
-    var daysInputValue = clock.querySelector('.days').value * 1000 * 60 * 60 * 24;
-    var hoursInputValue = clock.querySelector('.hours').value * 1000 * 60 * 60;
-    var minutesInputValue = clock.querySelector('.minutes').value * 1000 * 60;
-    var secondsInputValue = clock.querySelector('.seconds').value * 1000;
+    const clock = document.querySelector('.countdown__box');
+    let daysInputValue = clock.querySelector('.days').value * 1000 * 60 * 60 * 24;
+    let hoursInputValue = clock.querySelector('.hours').value * 1000 * 60 * 60;
+    let minutesInputValue = clock.querySelector('.minutes').value * 1000 * 60;
+    let secondsInputValue = clock.querySelector('.seconds').value * 1000;
 
-    var deadline = new Date(Date.parse(new Date()) + daysInputValue + hoursInputValue + minutesInputValue + secondsInputValue);
+    const deadline = new Date(Date.parse(new Date()) + daysInputValue + hoursInputValue + minutesInputValue + secondsInputValue);
 
     if (validateForm()) {
       initializeClock(deadline);
@@ -96,7 +96,7 @@
     getDefaultCountdown();
   };
 
-  var closeMessageOverlayHandler = function (evt) {
+  function closeMessageOverlayHandler(evt) {
     if (message.classList.contains('visible')) {
       evt.preventDefault();
       message.classList.remove('visible');
@@ -108,7 +108,7 @@
 
   window.countdown = {
     getDefaultCountdown: getDefaultCountdown
-  }
+  };
 
   startBtn.addEventListener('click', startCountdownHandler);
   resetBtn.addEventListener('click', resetCountdownHandler);

@@ -1,20 +1,23 @@
-'use strict';
 (function () {
-  var calculator = document.querySelector('.tip__inner');
-  var billInput = calculator.querySelector('#tip-bill');
-  var percentInput = calculator.querySelector('#sort');
-  var percentAmountInput = calculator.querySelector('#tip-amount');
-  var totalInput = calculator.querySelector('#tip-total');
+  // ----------------- tip -----------------
+  const calculator = document.querySelector('.tip__inner');
+  const billInput = calculator.querySelector('#tip-bill');
+  const percentInput = calculator.querySelector('#sort');
+  const percentAmountInput = calculator.querySelector('#tip-amount');
+  const totalInput = calculator.querySelector('#tip-total');
+  const peopleInput = calculator.querySelector('#tip-people');
+  const perPersonInput = calculator.querySelector('#tip-per-person');
 
   function calculationTipHandler () {
-    var tipPercent = parseFloat(percentInput.value * 0.01);
-    var tipAmount = billInput.value * tipPercent;
+    const tipPercent = parseFloat(percentInput.value * 0.01);
+    const tipAmount = billInput.value * tipPercent;
     percentAmountInput.value = tipAmount;
-    var totalAmount = parseFloat(billInput.value) + parseFloat(tipAmount);
+    const totalAmount = parseFloat(billInput.value) + parseFloat(tipAmount);
     totalInput.value = totalAmount;
+    perPersonInput.value = totalAmount / peopleInput.value;
   };
 
-  var fieldsInput = calculator.querySelectorAll('.fields-js');
+  const fieldsInput = calculator.querySelectorAll('.fields-js');
 
   fieldsInput.forEach(elem => {
     elem.addEventListener('change', calculationTipHandler);

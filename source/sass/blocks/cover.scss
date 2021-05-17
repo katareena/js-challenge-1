@@ -9,6 +9,8 @@
   width: 100%;
   height: 100vh;
   background: url("../img/bg-jsss.jpg");
+  background-size: 100px 100px;
+  background-repeat: repeat;
   background-attachment: fixed;
   filter: blur(5px) grayscale(1);
   // filter: blur(20px); //alternative effect
@@ -22,12 +24,13 @@
 
 .cover__cursor {
   display: none;
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
   position: absolute;
   left: 0;
   top: 0;
   background: url("../img/bg-jsss-click.jpg");
+  background-size: 100px 100px;
   background-repeat: repeat;
   border-radius: 50%;
   background-attachment: fixed;

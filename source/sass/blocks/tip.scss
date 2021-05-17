@@ -25,6 +25,12 @@
   width: inherit;
   border: none;
   box-shadow: 0 0 0 2px $gray-basic;
+  color: black;
+}
+
+.tip__label--result,
+.tip__input--result {
+  font-weight: 500;
 }
 
 .tip__input:hover,
